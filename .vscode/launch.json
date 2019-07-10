@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+
+            // Only debugs code within gatsby-node.js and the Gatsby node package itself
+            "name": "Debug Gatsby Build",
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+            "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+            "args": ["develop", "-p", "7777"],
+            "stopOnEntry": false,
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG": "gatsby:*"
+            },
+            "console": "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles": []
+        },
+        {
+            // Debugs runtime code.
+            // 1. yarn start
+            // 2. Set breakpoints
+            // 3. Attach debugger to the localhost instance in Chrome with F5
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome localhost:7777",
+            "url": "http://localhost:7777/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+        },
+    ]
+}
