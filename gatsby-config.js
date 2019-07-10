@@ -1,8 +1,13 @@
+// Load variables from `.env` as soon as possible
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV || "development"}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Mootoo Store`,
+    description: `Good stuff for people like me`,
+    author: `@jimmynordbeck`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
