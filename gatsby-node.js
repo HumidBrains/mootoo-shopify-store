@@ -7,6 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
       allShopifyProduct {
         edges {
           node {
+
             handle
           }
         }
